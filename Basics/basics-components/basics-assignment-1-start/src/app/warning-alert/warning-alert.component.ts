@@ -14,6 +14,6 @@ import { Component, Input } from "@angular/core";
         }`
     ]
 })
-export class WarningComponent{
+export class WarningAlertComponent{
     @Input() message: string;
 }
