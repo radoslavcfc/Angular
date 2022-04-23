@@ -1,0 +1,19 @@
+.container{
+    width: 33%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    width: 33%;
+    margin: auto;
+    background-color: rgb(28, 189, 28);
+    color: rgb(255, 255, 255);
+}
+
+button:disabled{
+    background-color: aliceblue;
+    color: black;
+}
