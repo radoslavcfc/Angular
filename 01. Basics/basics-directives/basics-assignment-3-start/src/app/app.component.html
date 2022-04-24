@@ -11,3 +11,21 @@
     </div>
   </div>
 </div>
+<div class="container">
+  <button 
+    (click)='show=!show; addLogs()' 
+    class="btn btn-info"
+    >
+    Dispay Details
+  </button>
+  <div [ngClass]="{invisible:!show, 'block-view':true}">
+    <p *ngIf='show'>
+      Content to show
+    </p>
+  </div>
+  <p 
+    *ngFor="let stamp of buttonClicks, let i = index"
+    [ngStyle]="{'backgroundColor': i >= 5 ?'blue':'', 'color': i >= 5 ?'white':''}">
+    {{stamp}}
+  </p>
+</div>
