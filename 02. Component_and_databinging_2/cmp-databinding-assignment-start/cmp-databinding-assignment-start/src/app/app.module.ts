@@ -4,10 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { GameControllComponent } from './game/game-controll/game-controll.component';
+import { EvenComponent } from './game/even/even.component';
+import { OddComponent } from './game/odd/odd.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GameControllComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,
