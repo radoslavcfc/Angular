@@ -16,11 +16,19 @@
   </div>
 </div>
 <hr>
-<app-game-controll 
-  (addComponentEvent)="addElement($event)">
-</app-game-controll>
-<div *ngFor="let num of allNumbers">
-  <app-even *ngIf = 'num%2===0' [number]='num'></app-even>
-  <app-odd  *ngIf = 'num%2!==0' [number]='num'></app-odd>
+<div class="container">
+  <app-game-controll 
+    (addComponentEvent)="addElement($event)">
+  </app-game-controll>
+  <div
+   *ngFor="let num of allNumbers">
+    <app-even 
+      *ngIf = 'num%2===0'
+      [number]='num'>
+    </app-even>
+    <app-odd  
+      *ngIf = 'num%2!==0'
+      [number]='num'>
+    </app-odd>
 </div>
-
+</div>
