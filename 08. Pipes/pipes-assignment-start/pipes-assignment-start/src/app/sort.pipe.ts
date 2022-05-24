@@ -5,9 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
   pure: false
 })
 export class SortPipe implements PipeTransform {
-
-  transform(value: any): any {
-    let result = value.sort((a,b)=>  a-b)
-    return result;
+  transform(value: any, valueType:string): any {
+    return value.sort((a,b)=> {      
+      if ( a[valueType] < b[valueType] ){
+        return -1;
+      }
+      if ( a[valueType] > b[valueType] ){
+        return 1;
+      }
+      return 0;    
+    })
   }
 }
